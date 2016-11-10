@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CS810SiriApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What can I help you with?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0h-Se-EF0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A67-4N-6nO"/>
+                                    <constraint firstAttribute="width" constant="343" id="zy3-ye-2ya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J38-xH-vMO">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zj7-pH-fDp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MWs-fx-2bY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="3qJ-lX-tHr"/>
+                                    <constraint firstAttribute="height" constant="128" id="zpq-q4-exg"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b0h-Se-EF0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="01s-Oi-EI7"/>
+                            <constraint firstItem="MWs-fx-2bY" firstAttribute="top" secondItem="b0h-Se-EF0" secondAttribute="bottom" constant="36" id="1iC-L3-WmP"/>
+                            <constraint firstItem="b0h-Se-EF0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="CDr-KI-JaR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J38-xH-vMO" secondAttribute="bottom" constant="177" id="EKX-Yo-qdO"/>
+                            <constraint firstItem="J38-xH-vMO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="He1-Vh-Hqh"/>
+                            <constraint firstItem="b0h-Se-EF0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IBW-bm-nq2"/>
+                            <constraint firstItem="MWs-fx-2bY" firstAttribute="centerX" secondItem="J38-xH-vMO" secondAttribute="centerX" id="LMI-nu-RhC"/>
+                            <constraint firstItem="b0h-Se-EF0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uky-Mb-o5a"/>
+                            <constraint firstItem="MWs-fx-2bY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bji-Mw-hWN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0h-Se-EF0" secondAttribute="bottom" constant="568" id="sIc-v6-HFm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="b0h-Se-EF0" id="e97-e4-9Q6"/>
+                        <outlet property="microphoneButton" destination="J38-xH-vMO" id="MKv-fl-Hyj"/>
+                        <outlet property="myTextView" destination="MWs-fx-2bY" id="gXq-BY-obm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
